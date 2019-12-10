@@ -9,15 +9,15 @@ const productController = require('../controllers/product');
 
 
 
-router.get('/', checkAuth, productController.product_get_all);
+router.get('/', productController.product_get_all);
 
-router.get('/:product_id',checkAuth, productController.product_get_detail);
+router.get('/:product_id', productController.product_get_detail);
 
-router.post('/', checkAuth, productController.product_posting);
+router.post('/', productController.product_posting);
 
-router.patch('/:product_id', checkAuth, productController.product_update);
+router.patch('/:product_id',productController.product_update);
 
-router.delete('/:product_id', checkAuth, productController.product_delete);
+router.delete('/:product_id', productController.product_delete);
 
 
 
